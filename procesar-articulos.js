@@ -18,3 +18,4 @@ const htmlOutput = lines.map(line => {
 
 
 fs.writeFileSync('output.html', htmlOutput);
+
