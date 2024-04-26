@@ -9,7 +9,7 @@ function removeDuplicateSanctions(text) {
     return text.replace(/: (\d+ ?€): \1/g, ': $1');
 }
 function quitarCoso(text) {
-
+    const regex = /\s€ar usuario: razon:/;
     return text.replace(regex, '');
 }
 function removePlusMinusFromText(text) {
@@ -151,7 +151,7 @@ function updateCommand() {
         articulosDeArresto.push(modifiedText);
     });
 
-    commandText = `/multas poner usuario: razon:` + commandText.substr(5);
+    commandText = `/multas poner usuario: razon:\nTotal: ${totalSanction} €` + commandText.substr(5);
     commandElem.textContent = quitarCoso(removePlusMinusFromText(commandText));
 
     if (totalSinPrefijo > 1000 || totalConPrefijo > 2000) {
