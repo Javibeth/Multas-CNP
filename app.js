@@ -152,7 +152,6 @@ function updateCommand() {
     });
 
     commandText = `/multas poner usuario: razon:` + commandText.substr(5);
-    commandElem.textContent = quitarCoso(removePlusMinusFromText(commandText));
 
     if (totalSinPrefijo > 1000 || totalConPrefijo > 2000) {
         arrestReportElem.classList.remove('hidden');
