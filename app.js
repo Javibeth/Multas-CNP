@@ -8,7 +8,9 @@ function removeDuplicateSanctions(text) {
 
     return text.replace(/: (\d+ ?€): \1/g, ': $1');
 }
+function quitarCoso(text) {
 
+    return text.replace(regex, '');
 }
 function removePlusMinusFromText(text) {
     return text.replace(/\+|-/g, '');
